@@ -7,9 +7,7 @@ Este repositorio contiene el código fuente de la página web estática de la es
 - `assets/logo.png`: Logotipo oficial de MANG369.
 - `assets/qr.jpg`: Código QR de invitación al servidor de Discord.
 
-## 🚀 Cómo publicar en GitHub Pages:
-1. Sube estos archivos a un repositorio en GitHub (ej. `mang369-tiktok-strategy`).
-2. Ve a la pestaña **Settings** (Configuración) de tu repositorio.
-3. En el menú lateral izquierdo, haz clic en **Pages**.
-4. En **Build and deployment**, selecciona la rama `main` (o `master`) y la carpeta `/ (root)`.
-5. Haz clic en **Save**. ¡Tu web estará online en unos segundos!
+## 🚀 Publicado en GitHub Pages:
+1. Archivos en un repositorio en GitHub ( `mang369-tiktok-strategy`).
+2.**Build and deployment**, rama `main`. y la carpeta `/ (root)`.
+3. **Pages** web online.
