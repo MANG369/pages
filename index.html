@@ -1,78 +1,252 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MANG369 | Hub de Proyectos</title>
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosistema Digital MANG369</title>
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navegación y Menú Desplegable */
+        nav {
+            background-color: #141824;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #1e293b;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-btn {
+            background: #1e293b;
+            color: #ffffff;
+            border: 1px solid #334155;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #334155;
+            color: #38bdf8;
+        }
+
+        /* Menú Desplegable (Dropdown) */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1e293b;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+            border-radius: 6px;
+            padding: 8px 0;
+            z-index: 1000;
+            border: 1px solid #334155;
+        }
+
+        .dropdown-menu a {
+            color: #cbd5e1;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            transition: background 0.2s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #334155;
+            color: #ffffff;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Contenido Principal */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        p.subtitle {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .hero-logo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+            margin-bottom: 30px;
+            object-fit: cover;
+        }
+
+        p.frequency {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        /* Iconos de Redes Sociales */
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4af37;
+            font-size: 1.4rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: #d4af37;
+            color: #0d0d0d;
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Encabezado y Navegación -->
-  <header class="header">
-    <div class="logo">
-      <i class="fa-solid fa-cubes-stacked"></i> MANG369
-    </div>
-    <nav class="navbar">
-      <a href="https://mang369.github.io/pages/" class="nav-link active"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="https://mang369.github.io/tiktokMANG369/" class="nav-link" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
-      <a href="https://mang369.github.io/ORACULO/" class="nav-link" target="_blank"><i class="fa-solid fa-eye"></i> Oráculo</a>
-      <a href="https://mang369.github.io/IDEA/" class="nav-link" target="_blank"><i class="fa-solid fa-lightbulb"></i> Idea</a>
-      <a href="https://mang369.github.io/Voleibot/" class="nav-link" target="_blank"><i class="fa-solid fa-volleyball"></i> Voleibot</a>
+    <!-- Navegación con Menús Desplegables -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-cubes"></i> MANG369
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item">
+                <a href="#" class="nav-btn"><i class="fa-solid fa-house"></i> Inicio</a>
+            </li>
+            
+            <!-- Desplegable TikTok -->
+            <li class="nav-item">
+                <button class="nav-btn"><i class="fa-brands fa-tiktok"></i> TikTok <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-menu">
+                    <a href="https://mang369.github.io/tiktokMANG369/" target="_blank">github.page</a>
+                    <a href="https://www.tiktok.com/@mang.369?is_from_webapp=1&sender_device=pc" target="_blank">MANG369</a>
+                    <a href="https://www.tiktok.com/@marco.antonio.nieves?is_from_webapp=1&sender_device=pc" target="_blank">marco.nieves</a>
+                </div>
+            </li>
+
+            <!-- Desplegable Herramientas -->
+            <li class="nav-item">
+                <button class="nav-btn"><i class="fa-solid fa-lightbulb"></i> Herramientas <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-menu">
+                    <a href="https://mang369.github.io/IDEA/" target="_blank">💡 Idea</a>
+                    <a href="https://mang369.github.io/Voleibot/" target="_blank">🏐 Voleibot</a>
+                    <a href="https://mang369.github.io/ORACULO/" target="_blank">🔮 ORÁCULO</a>
+                </div>
+            </li>
+
+            <!-- Desplegable YHWHCore -->
+            <li class="nav-item">
+                <button class="nav-btn">YHWHCore <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-menu">
+                    <a href="https://yhwhcore.webnode.page/" target="_blank">YHWHCore</a>
+                    <a href="https://github.com/YHWHCore-webnode-com" target="_blank">Mi Constitucion</a>
+                    <a href="https://t.me/Norelbis_bot" target="_blank">yulibot</a>
+                    <a href="https://yhwhcore.webnode.page/libro-blanco/" target="_blank">NG-Business</a>
+                    <a href="https://www.facebook.com/yhwhcore?_rdr" target="_blank">MANG369.bot</a>
+                </div>
+            </li>
+
+            <!-- Desplegable Legalidades -->
+            <li class="nav-item">
+                <button class="nav-btn">Legalidades <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-menu">
+                    <a href="https://lavirtud9.webnode.es" target="_blank">la virtud</a>
+                    <a href="https://comuna-la-paz.webnode.com.ve" target="_blank">BCLAP</a>
+                    <!-- Enlace directo al archivo PDF escaneado (ANC-ECAY) -->
+                    <a href="./R-ES 011 en honor a EZEQUIEL ZAMORA Y FABRICIO.pdf" target="_blank">ANC-ECAY (PDF)</a>
+                </div>
+            </li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- Sección Principal / Hero -->
-  <section class="hero">
-    <h1>Ecosistema Digital MANG369</h1>
-    <p>Accede directamente a todos los proyectos, herramientas e iniciativas.</p>
-  </section>
+    <!-- Sección Principal -->
+    <main>
+        <h1>Ecosistema Digital MANG369</h1>
+        <p class="subtitle">Accede directamente a todos los proyectos, herramientas e iniciativas.</p>
 
-  <!-- Tarjetas de Proyectos -->
-  <main class="container">
-    <div class="grid">
+        <!-- Imagen del Logo Central -->
+        <img src="logo.png" alt="MANG369 Emblem" class="hero-logo">
 
-      <!-- Proyecto 1: TikTok -->
-      <div class="card">
-        <div class="card-icon"><i class="fa-brands fa-tiktok"></i></div>
-        <h3>tiktokMANG369</h3>
-        <p>Comunidad, transmisiones en vivo, clips y enlaces de la presencia en TikTok.</p>
-        <a href="https://mang369.github.io/tiktokMANG369/" class="btn" target="_blank">Visitar Página <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      </div>
+        <p class="frequency">Arquitectura de redes, frecuencia 3-6-9.</p>
 
-      <!-- Proyecto 2: Oráculo -->
-      <div class="card">
-        <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
-        <h3>ORÁCULO</h3>
-        <p>Espacio interactivo de consulta, análisis e interpretaciones visuales.</p>
-        <a href="https://mang369.github.io/ORACULO/" class="btn" target="_blank">Visitar Página <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      </div>
-
-      <!-- Proyecto 3: Idea -->
-      <div class="card">
-        <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
-        <h3>IDEA</h3>
-        <p>Laboratorio de conceptos, desarrollo de propuestas y banco de proyectos.</p>
-        <a href="https://mang369.github.io/IDEA/" class="btn" target="_blank">Visitar Página <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      </div>
-
-      <!-- Proyecto 4: Voleibot -->
-      <div class="card">
-        <div class="card-icon"><i class="fa-solid fa-volleyball"></i></div>
-        <h3>Voleibot</h3>
-        <p>Plataforma para seguimiento, estadísticas y gestión deportiva en voleibol.</p>
-        <a href="https://mang369.github.io/Voleibot/" class="btn" target="_blank">Visitar Página <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- Pie de Página -->
-  <footer>
-    <p>&copy; NG Business Group. Todos los derechos reservados.</p>
-  </footer>
+        <!-- Botones de Redes y Contacto -->
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@mang.369" target="_blank" class="social-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://discord.gg/jdjqz5gfH" target="_blank" class="social-btn" title="Discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61583261370410" target="_blank" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="mailto:nievesgarciamarcoantonio@gmail.com" class="social-btn" title="Correo Electrónico"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </main>
 
 </body>
 </html>
