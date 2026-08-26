@@ -140,8 +140,34 @@
         p.frequency {
             color: #64748b;
             font-size: 0.95rem;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             letter-spacing: 1px;
+        }
+
+        /* Botón de Reproducción de Música */
+        .audio-player-container {
+            margin-bottom: 30px;
+        }
+
+        .music-btn {
+            background: linear-gradient(135deg, #d4af37, #aa820a);
+            color: #0d0d0d;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
         }
 
         /* Iconos de Redes Sociales */
@@ -223,7 +249,7 @@
                     <a href="https://lavirtud9.webnode.es" target="_blank">LA VIRTUD</a>
                     <a href="https://comuna-la-paz.webnode.com.ve" target="_blank">BCLAP</a>
                     <a href="https://anc-ecay.godaddysites.com/gaceta-oficial-ecay" target="_blank">ANC-ECAY</a>
-                    </div>
+                </div>
             </li>
         </ul>
     </nav>
@@ -236,7 +262,18 @@
         <!-- Imagen del Logo Central -->
         <img src="logo.png" alt="MANG369 Emblem" class="hero-logo">
 
-        <p class="frequency">Arquitectura de redes, frecuencia 3-6-9.</p>
+        <p class="frequency">Frecuencia 3-6-9.</p>
+
+        <!-- Reproductor de Audio / Canción de Fondo -->
+        <div class="audio-player-container">
+            <audio id="bg-audio" loop preload="auto">
+                <source src="cancion.mp3" type="audio/mpeg">
+                Tu navegador no soporta el reproductor de audio.
+            </audio>
+            <button id="play-btn" class="music-btn" onclick="toggleAudio()">
+                <i class="fa-solid fa-play" id="audio-icon"></i> <span id="audio-text">Música de Fondo</span>
+            </button>
+        </div>
 
         <!-- Botones de Redes y Contacto -->
         <div class="social-links">
@@ -246,6 +283,39 @@
             <a href="mailto:nievesgarciamarcoantonio@gmail.com" class="social-btn" title="Correo Electrónico"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </main>
+
+    <!-- Script de Control del Audio -->
+    <script>
+        const audio = document.getElementById('bg-audio');
+        const playBtn = document.getElementById('play-btn');
+        const audioIcon = document.getElementById('audio-icon');
+        const audioText = document.getElementById('audio-text');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                audioIcon.className = "fa-solid fa-pause";
+                audioText.textContent = "Pausar Música";
+            } else {
+                audio.pause();
+                audioIcon.className = "fa-solid fa-play";
+                audioText.textContent = "Reproducir Música";
+            }
+        }
+
+        // Intento de reproducción automática en el primer clic del visitante
+        document.addEventListener('click', function startAudioOnFirstClick() {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    audioIcon.className = "fa-solid fa-pause";
+                    audioText.textContent = "Pausar Música";
+                }).catch(e => {
+                    console.log("Autoplay restringido por el navegador hasta interactuar directamente con el botón.");
+                });
+            }
+            document.removeEventListener('click', startAudioOnFirstClick);
+        }, { once: true });
+    </script>
 
 </body>
 </html>
