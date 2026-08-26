@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mang369.github.io/sitemap.xml

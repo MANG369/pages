@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANG369</title>
+    
+    <!-- 1. Meta Etiquetas Básicas -->
+    <title>Ecosistema Digital MANG369 | Herramientas e Iniciativas</title>
+    <meta name="description" content="Accede directamente a las herramientas e iniciativas del Ecosistema Digital MANG369, proyectos YHWHCore, canales de TikTok y recursos legales. Frecuencia 3-6-9.">
+    <meta name="keywords" content="MANG369, Ecosistema Digital, YHWHCore, Voleibot, Oráculo, Frecuencia 369, Marco Nieves">
+    <meta name="author" content="Marco Antonio Nieves">
+    <meta name="robots" content="index, follow">
+
+    <!-- 3. Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- 2. Open Graph (OG) para redes sociales (WhatsApp, Telegram, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ecosistema Digital MANG369">
+    <meta property="og:description" content="Accede directamente a las herramientas, proyectos e iniciativas digitales de MANG369.">
+    <meta property="og:image" content="https://mang369.github.io/logo.png">
+    <meta property="og:url" content="https://mang369.github.io/">
+    <meta property="og:site_name" content="MANG369">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ecosistema Digital MANG369">
+    <meta name="twitter:description" content="Accede directamente a las herramientas e iniciativas del Ecosistema Digital MANG369.">
+    <meta name="twitter:image" content="https://mang369.github.io/logo.png">
+
+    <!-- 4. Datos Estructurados (Schema.org - JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "MANG369",
+      "url": "https://mang369.github.io/",
+      "description": "Ecosistema Digital MANG369 con herramientas, proyectos e iniciativas digitales.",
+      "author": {
+        "@type": "Person",
+        "name": "Marco Antonio Nieves"
+      }
+    }
+    </script>
+
     <!-- Iconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -16,7 +58,6 @@
 
         body {
             background-color: #0d0d0d;
-            /* Se añade la imagen de fondo con capa de degradado para legibilidad */
             background-image: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.85)), url('fondo.jpg');
             background-size: cover;
             background-position: center;
@@ -210,55 +251,55 @@
 </head>
 <body>
 
-    <!-- Navegación con Menús Desplegables -->
-    <nav>
+    <!-- 5. Accesibilidad SEO y HTML Semántico en navegación -->
+    <nav aria-label="Navegación principal">
         <div class="logo">
-            <i class="fa-solid fa-cubes"></i> MANG369
+            <i class="fa-solid fa-cubes" aria-hidden="true"></i> MANG369
         </div>
         <ul class="nav-links">
             <li class="nav-item">
-                <a href="#" class="nav-btn"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="#" class="nav-btn"><i class="fa-solid fa-house" aria-hidden="true"></i> Inicio</a>
             </li>
             
             <!-- Desplegable TikTok -->
             <li class="nav-item">
-                <button class="nav-btn"><i class="fa-brands fa-tiktok"></i> TikTok <i class="fa-solid fa-chevron-down"></i></button>
+                <button class="nav-btn" aria-expanded="false" aria-haspopup="true"><i class="fa-brands fa-tiktok" aria-hidden="true"></i> TikTok <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
                 <div class="dropdown-menu">
-                    <a href="https://mang369.github.io/tiktokMANG369/" target="_blank">Page tiktok</a>
-                    <a href="https://www.tiktok.com/@mang.369?is_from_webapp=1&sender_device=pc" target="_blank">MANG369</a>
-                    <a href="https://www.tiktok.com/@marco.antonio.nieves?is_from_webapp=1&sender_device=pc" target="_blank">Marco Nieves</a>
+                    <a href="https://mang369.github.io/tiktokMANG369/" target="_blank" rel="noopener noreferrer">Page tiktok</a>
+                    <a href="https://www.tiktok.com/@mang.369?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">MANG369</a>
+                    <a href="https://www.tiktok.com/@marco.antonio.nieves?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">Marco Nieves</a>
                 </div>
             </li>
 
             <!-- Desplegable Herramientas -->
             <li class="nav-item">
-                <button class="nav-btn"><i class="fa-solid fa-lightbulb"></i> Herramientas <i class="fa-solid fa-chevron-down"></i></button>
+                <button class="nav-btn" aria-expanded="false" aria-haspopup="true"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Herramientas <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
                 <div class="dropdown-menu">
-                    <a href="https://mang369.github.io/IDEA/" target="_blank">💡 Idea</a>
-                    <a href="https://mang369.github.io/Voleibot/" target="_blank">🏐 Voleibot</a>
-                    <a href="https://mang369.github.io/ORACULO/" target="_blank">🔮 ORÁCULO</a>
+                    <a href="https://mang369.github.io/IDEA/" target="_blank" rel="noopener noreferrer">💡 Idea</a>
+                    <a href="https://mang369.github.io/Voleibot/" target="_blank" rel="noopener noreferrer">🏐 Voleibot</a>
+                    <a href="https://mang369.github.io/ORACULO/" target="_blank" rel="noopener noreferrer">🔮 ORÁCULO</a>
                 </div>
             </li>
 
             <!-- Desplegable YHWHCore -->
             <li class="nav-item">
-                <button class="nav-btn">YHWHCore <i class="fa-solid fa-chevron-down"></i></button>
+                <button class="nav-btn" aria-expanded="false" aria-haspopup="true">YHWHCore <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
                 <div class="dropdown-menu">
-                    <a href="https://yhwhcore.webnode.page/" target="_blank">YHWHCore</a>
-                    <a href="https://github.com/YHWHCore-webnode-com" target="_blank">WHITE BOOK</a>
-                    <a href="https://t.me/Norelbis_bot" target="_blank">TelegramBOT</a>
-                    <a href="https://yhwhcore.webnode.page/libro-blanco/" target="_blank">BUSINESS</a>
-                    <a href="https://www.facebook.com/yhwhcore?_rdr" target="_blank">Facebook</a>
+                    <a href="https://yhwhcore.webnode.page/" target="_blank" rel="noopener noreferrer">YHWHCore</a>
+                    <a href="https://github.com/YHWHCore-webnode-com" target="_blank" rel="noopener noreferrer">WHITE BOOK</a>
+                    <a href="https://t.me/Norelbis_bot" target="_blank" rel="noopener noreferrer">TelegramBOT</a>
+                    <a href="https://yhwhcore.webnode.page/libro-blanco/" target="_blank" rel="noopener noreferrer">BUSINESS</a>
+                    <a href="https://www.facebook.com/yhwhcore?_rdr" target="_blank" rel="noopener noreferrer">Facebook</a>
                 </div>
             </li>
 
             <!-- Desplegable Legalidades -->
             <li class="nav-item">
-                <button class="nav-btn">Legalidades <i class="fa-solid fa-chevron-down"></i></button>
+                <button class="nav-btn" aria-expanded="false" aria-haspopup="true">Legalidades <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
                 <div class="dropdown-menu">
-                    <a href="https://lavirtud9.webnode.es" target="_blank">LA VIRTUD</a>
-                    <a href="https://comuna-la-paz.webnode.com.ve" target="_blank">BCLAP</a>
-                    <a href="https://anc-ecay.godaddysites.com/gaceta-oficial-ecay" target="_blank">ANC-ECAY</a>
+                    <a href="https://lavirtud9.webnode.es" target="_blank" rel="noopener noreferrer">LA VIRTUD</a>
+                    <a href="https://comuna-la-paz.webnode.com.ve" target="_blank" rel="noopener noreferrer">BCLAP</a>
+                    <a href="https://anc-ecay.godaddysites.com/gaceta-oficial-ecay" target="_blank" rel="noopener noreferrer">ANC-ECAY</a>
                 </div>
             </li>
         </ul>
@@ -269,8 +310,8 @@
         <h1>Ecosistema Digital MANG369</h1>
         <p class="subtitle">Accede directamente a las herramientas e iniciativas.</p>
 
-        <!-- Imagen del Logo Central -->
-        <img src="logo.png" alt="MANG369 Emblem" class="hero-logo">
+        <!-- Imagen del Logo Central con atributo alt accesible -->
+        <img src="logo.png" alt="Emblema del Ecosistema Digital MANG369" class="hero-logo">
 
         <p class="frequency">Frecuencia 3-6-9.</p>
 
@@ -280,17 +321,17 @@
                 <source src="cancion.mp3" type="audio/mpeg">
                 Tu navegador no soporta el reproductor de audio.
             </audio>
-            <button id="play-btn" class="music-btn" onclick="toggleAudio()">
-                <i class="fa-solid fa-play" id="audio-icon"></i> <span id="audio-text">Música de Fondo</span>
+            <button id="play-btn" class="music-btn" onclick="toggleAudio()" aria-label="Reproducir o pausar música de fondo">
+                <i class="fa-solid fa-play" id="audio-icon" aria-hidden="true"></i> <span id="audio-text">Música de Fondo</span>
             </button>
         </div>
 
-        <!-- Botones de Redes y Contacto -->
+        <!-- 5. Enlaces externos protegidos con rel="noopener noreferrer" y aria-label -->
         <div class="social-links">
-            <a href="https://www.tiktok.com/@marco_nieves369" target="_blank" class="social-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://discord.gg/UpR9asKev" target="_blank" class="social-btn" title="Discord"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61583261370410" target="_blank" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="mailto:nievesgarciamarcoantonio@gmail.com" class="social-btn" title="Correo Electrónico"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.tiktok.com/@marco_nieves369" target="_blank" rel="noopener noreferrer" class="social-btn" title="TikTok" aria-label="Visitar perfil de TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://discord.gg/UpR9asKev" target="_blank" rel="noopener noreferrer" class="social-btn" title="Discord" aria-label="Unirse al servidor de Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61583261370410" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook" aria-label="Visitar página de Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="mailto:nievesgarciamarcoantonio@gmail.com" class="social-btn" title="Correo Electrónico" aria-label="Enviar correo a Marco Antonio Nieves"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
         </div>
     </main>
 
