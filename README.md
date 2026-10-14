@@ -1,4 +1,4 @@
-# MANG369 TikTok Growth 🚀
+# MANG369 TikTok  🚀
 
 Este repositorio contiene el código fuente de la página web en TikTok para **MANG369**, optimizada para ser publicada de forma gratuita y directa en **GitHub Pages**.
 
