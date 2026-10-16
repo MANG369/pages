@@ -1,6 +1,6 @@
 # MANG369 TikTok  🚀
 
-Este repositorio contiene el código fuente de la página web en TikTok para **MANG369**, optimizada para ser publicada de forma gratuita y directa en **GitHub Pages**.
+Este repositorio contiene el código fuente de la página web en TikTok para **MANG369**, optimizada para ser publicada de forma directa en **GitHub Pages**.
 
 ## 📁 Estructura del Proyecto
 - `index.html`: Página principal con diseño moderno en modo oscuro, cyberpunk/esotérico, adaptada para móviles y escritorio.
